@@ -20,7 +20,7 @@ class LoginForm extends React.Component {
     e.preventDefault()
     let username = this.state.username
     let password = this.state.password
-    this.state.username.length > 0 && this.state.password.length > 0 ? console.log(username, password) : alert("login fail")
+    this.state.username.length > 0 && this.state.password.length > 0 ? this.props.handleLogin({username, password}) : alert("login fail")
     
   }
 
